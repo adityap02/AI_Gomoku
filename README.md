@@ -43,3 +43,5 @@ Contributions to improve this project are highly appreciated. Please refer to [C
 
 ## License
 This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for details.
+
+Some changes
