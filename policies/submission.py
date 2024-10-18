@@ -1,7 +1,7 @@
 import numpy as np
 from tensorflow.keras.models import load_model
 import gomoku as gm
-import random
+import secrets
 
 def myfun(state):
     path = 'policies/model.h5'
@@ -21,7 +21,7 @@ def myfun(state):
     tup = calculate(inp,model)
     # here the model predicts a invalid move
     # After trying a lot of implementations to handle this problem, I thought of using this random function keeping in mind the score vs time tradeoff.
-    if(tup not in valid_actions):tup = random.choice(valid_actions)
+    if(tup not in valid_actions):tup = secrets.choice(valid_actions)
     return tup
 def calculate(inp,model):
     output = model.predict(inp).squeeze().reshape((15, 15))
